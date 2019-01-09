@@ -17,4 +17,4 @@ RUN git clone https://github.com/genieacs/genieacs-gui /app && \
 ADD ./production.rb /app/config/environments/production.rb
 ADD ./entrypoint.sh /app/entrypoint.sh
 
-CMD ["rails", "s"]
+ENTRYPOINT ["/app/entrypoint.sh"]
