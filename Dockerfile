@@ -15,5 +15,6 @@ RUN git clone https://github.com/genieacs/genieacs-gui /app && \
     mv /app/config/graphs-sample.json.erb /app/config/graphs.json.erb
 
 ADD ./production.rb /app/config/environments/production.rb
+ADD ./entrypoint.sh /app/entrypoint.sh
 
 CMD ["rails", "s"]
